@@ -196,7 +196,7 @@
   position:absolute;
   inset:0;
 
-  background:url('/image/sweet10.jpg') center/cover no-repeat;
+  background:url('../image/sweet10.jpg') center/cover no-repeat;
 
   filter:brightness(0.6);
   z-index:1;
