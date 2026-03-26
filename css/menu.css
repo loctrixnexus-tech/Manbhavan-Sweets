@@ -723,7 +723,7 @@ body{
   position:absolute;
   inset:0;
 
-  background:url('/image/herobg.jpg') center/cover no-repeat;
+  background:url('../image/herobg.jpg') center/cover no-repeat;
 
   filter:blur(10px);
   transform:scale(1.1);
