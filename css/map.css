@@ -1,0 +1,157 @@
+
+/* NAVBAR */
+
+
+
+/* MAP SECTION */
+.map-section{
+  position:relative;
+  margin-top:70px;
+  height:calc(100vh - 70px);
+  width:100%;
+  overflow:hidden;
+}
+
+/* MAP BACKGROUND */
+.map-bg{
+  position:absolute;
+  top:0;
+  left:0;
+
+  width:100%;
+  height:100%;
+
+  border:0;
+  z-index:1;
+}
+
+/* DARK OVERLAY */
+.map-section::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    to right,
+    rgba(0,0,0,0.5),
+    rgba(0,0,0,0.2)
+  );
+
+  z-index:2;
+}
+
+/* CARD */
+.map-card{
+  position:absolute;
+  top:50%;
+  right:8%;
+  transform:translateY(-50%);
+
+  width:420px;
+  padding:40px;
+
+  border-radius:18px;
+
+  background:rgba(20,20,20,0.9);
+  color:white;
+
+  z-index:3;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5),
+    0 0 40px rgba(200,169,106,0.2);
+}
+
+/* TEXT */
+.branch{
+  color:#c8a96a;
+  font-size:14px;
+}
+
+.map-card h2{
+  font-size:30px;
+  margin:10px 0 20px;
+
+  background:linear-gradient(to right,#fff,#c8a96a);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.map-card p{
+  margin-bottom:10px;
+  font-size:15px;
+}
+
+/* BUTTONS */
+.buttons{
+  display:flex;
+  gap:15px;
+  margin-top:20px;
+}
+
+.buttons a{
+  flex:1;
+  text-align:center;
+  padding:12px;
+  border-radius:10px;
+  text-decoration:none;
+
+  font-weight:600;
+
+  background:linear-gradient(to right,#c8a96a,#e6c88b);
+  color:#000;
+
+  transition:0.3s;
+}
+
+.buttons a:hover{
+  transform:translateY(-3px);
+  box-shadow:0 10px 25px rgba(200,169,106,0.5);
+}
+
+
+
+
+@media( max-width:768px){
+
+.map-card{
+  position:absolute;
+  top:44%;
+
+  transform:translateY(-50%);
+
+  width:278px;
+  padding:20px;
+
+  border-radius:18px;
+
+  background:rgba(20,20,20,0.9);
+  color:white;
+
+  z-index:3;
+
+  box-shadow:
+    0 20px 60px rgba(0,0,0,0.5),
+    0 0 40px rgba(200,169,106,0.2);
+}
+.buttons a{
+  padding:2px;
+}
+
+
+body{
+  margin:0;
+  padding:0;
+
+}
+.navbar{
+  margin-bottom: 0;
+}
+
+.map,.map-section, iframe{
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  display: block;
+}
+
+}

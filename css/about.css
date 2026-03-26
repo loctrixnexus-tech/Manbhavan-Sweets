@@ -1,0 +1,691 @@
+
+/* HERO */
+.about-hero{
+  height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+
+  background:linear-gradient(135deg,#000,#3a2d0f,#c8a96a);
+  color:#fff;
+}
+
+.hero-content h1{
+  font-size:60px;
+  letter-spacing:2px;
+  animation:fadeUp 1s ease;
+}
+
+.hero-content p{
+  margin-top:10px;
+  opacity:0.8;
+}
+
+/* SECTION */
+.about-section{
+  padding:80px 10%;
+  text-align:center;
+}
+
+.about-section h2{
+  font-size:36px;
+  margin-bottom:20px;
+}
+
+.about-section p{
+  max-width:700px;
+  margin:auto;
+  color:#555;
+}
+
+/* CARDS */
+.features{
+  display:flex;
+  gap:30px;
+  padding:60px 10%;
+}
+
+.card{
+  flex:1;
+  padding:30px;
+  background:#fff;
+  border-radius:20px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.1);
+  transition:0.4s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.03);
+  box-shadow:0 20px 40px rgba(0,0,0,0.2);
+}
+
+/* HIGHLIGHT */
+.highlight{
+  padding:80px 10%;
+  text-align:center;
+  background:linear-gradient(to right,#c8a96a,#fff);
+}
+
+.highlight h2{
+  font-size:40px;
+}
+
+.highlight p{
+  max-width:700px;
+  margin:auto;
+}
+
+/* FAQ */
+/* FAQ SECTION */
+.faq{
+  padding:100px 10%;
+  background:linear-gradient(135deg,#f8f6f2,#ffffff);
+}
+
+/* TITLE */
+.faq h2{
+  font-size:42px;
+  margin-bottom:40px;
+  text-align:left;
+
+  background:linear-gradient(to right,#000,#c8a96a);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* FAQ ITEM */
+.faq-item{
+  margin-bottom:20px;
+  border-radius:12px;
+  overflow:hidden;
+
+  background:rgba(255,255,255,0.7);
+  backdrop-filter:blur(10px);
+
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+
+  transition:0.3s ease;
+}
+
+/* HOVER EFFECT */
+.faq-item:hover{
+  transform:translateY(-3px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* QUESTION */
+.faq-q{
+  width:100%;
+  padding:18px 25px;
+  border:none;
+  background:transparent;
+
+  font-size:16px;
+  font-weight:500;
+  text-align:left;
+
+  cursor:pointer;
+  position:relative;
+}
+
+/* PLUS ICON */
+.faq-q::after{
+  content:"+";
+  position:absolute;
+  right:20px;
+  top:50%;
+  transform:translateY(-50%);
+  font-size:20px;
+  color:#c8a96a;
+
+  transition:0.3s;
+}
+
+/* ANSWER */
+.faq-a{
+  max-height:0;
+  overflow:hidden;
+
+  padding:0 25px;
+  color:#555;
+  font-size:15px;
+  line-height:1.6;
+
+  transition:all 0.4s ease;
+}
+
+/* ACTIVE STATE */
+.faq-item.active .faq-a{
+  max-height:200px;
+  padding:15px 25px;
+}
+
+/* ICON CHANGE */
+.faq-item.active .faq-q::after{
+  content:"−";
+  transform:translateY(-50%) rotate(180deg);
+}
+
+/* GOLD GLOW EFFECT */
+.faq-item::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:12px;
+
+  background:linear-gradient(135deg,transparent,#c8a96a,transparent);
+  opacity:0;
+  transition:0.3s;
+}
+
+.faq-item:hover::before{
+  opacity:0.08;
+}
+
+
+/* SECTION */
+.legacy{
+  position:relative;
+  height:80vh;
+  overflow:hidden;
+}
+
+/* BACKGROUND IMAGE */
+.legacy-bg{
+  position:absolute;
+  inset:0;
+
+  background:url('/image/sweet10.jpg') center/cover no-repeat;
+
+  filter:brightness(0.6);
+  z-index:1;
+}
+
+/* OPTIONAL DARK GRADIENT */
+.legacy::after{
+  content:"";
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(to right, rgba(0,0,0,0), transparent);
+  z-index:2;
+}
+
+/* CARD */
+.legacy-card{
+  position:absolute;
+  right:8%;
+  top:50%;
+  transform:translateY(-50%);
+
+  width:420px;
+  padding:45px;
+
+  background:rgba(0,0,0,0.75);
+  backdrop-filter:blur(12px);
+
+  border-radius:15px;
+  color:#fff;
+
+  box-shadow:0 25px 80px rgba(0,0,0,0.6);
+
+  z-index:3;
+
+  animation:cardFade 1s ease;
+}
+
+/* SMALL HEADING */
+.legacy-card h4{
+  font-family:cursive;
+  font-size:26px;
+  color:#c8a96a;
+  margin-bottom:5px;
+
+  animation:slideLeft 1s ease;
+}
+
+/* MAIN HEADING */
+.legacy-card h2{
+  font-size:48px;
+  letter-spacing:2px;
+  margin-bottom:15px;
+
+  background:linear-gradient(to right,#fff,#c8a96a);
+  -webkit-background-clip:text;
+  color:transparent;
+
+  animation:slideLeft 1.2s ease;
+}
+
+/* TEXT */
+.legacy-card p{
+  font-size:15px;
+  color:#ddd;
+  line-height:1.7;
+
+  animation:fadeIn 1.5s ease;
+}
+
+/* BUTTON */
+.legacy-btn{
+  display:inline-block;
+  margin-top:25px;
+  padding:12px 25px;
+
+  border:1px solid #c8a96a;
+  color:#c8a96a;
+  text-decoration:none;
+  border-radius:5px;
+
+  transition:0.3s;
+}
+
+.legacy-btn:hover{
+  background:#c8a96a;
+  color:#000;
+}
+
+/* ANIMATIONS */
+@keyframes cardFade{
+  from{
+    opacity:0;
+    transform:translateY(80px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(-50%);
+  }
+}
+
+@keyframes slideLeft{
+  from{
+    opacity:0;
+    transform:translateX(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes fadeIn{
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+
+
+/* FEATURES SECTION */
+.features{
+  display:flex;
+  gap:40px;
+  padding:80px 10%;
+  justify-content:center;
+}
+
+/* CARD */
+.card{
+  flex:1;
+  padding:40px 30px;
+  border-radius:20px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+
+  background:rgba(255,255,255,0.6);
+  backdrop-filter:blur(12px);
+
+  box-shadow:0 20px 40px rgba(0,0,0,0.1);
+
+  transition:all 0.4s ease;
+}
+
+/* GOLD BORDER GLOW */
+.card::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:20px;
+  padding:2px;
+
+  background:linear-gradient(135deg,#c8a96a,#fff,#c8a96a);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor;
+  mask-composite:exclude;
+}
+
+/* HOVER EFFECT */
+.card:hover{
+  transform:translateY(-12px) scale(1.03);
+  box-shadow:0 30px 60px rgba(0,0,0,0.2);
+}
+
+/* ICON */
+.icon{
+  font-size:40px;
+  margin-bottom:15px;
+
+  background:linear-gradient(135deg,#c8a96a,#fff);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* TITLE */
+.card h3{
+  font-size:22px;
+  margin-bottom:10px;
+}
+
+/* TEXT */
+.card p{
+  color:#555;
+  font-size:15px;
+}
+
+/* SOFT GLOW */
+.card::after{
+  content:"";
+  position:absolute;
+  width:200px;
+  height:200px;
+
+  background:radial-gradient(circle, rgba(200,169,106,0.3), transparent);
+  top:-50px;
+  right:-50px;
+  filter:blur(80px);
+}
+
+
+/* SECTION */
+.experience{
+  position:relative;
+  padding:120px 10%;
+  text-align:center;
+  overflow:hidden;
+
+  background:linear-gradient(135deg,#f5f2ea,#fff);
+}
+
+/* GLOW EFFECT BACKGROUND */
+.experience::before{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+
+  background:radial-gradient(circle, rgba(200,169,106,0.3), transparent);
+
+  top:-100px;
+  left:-100px;
+  filter:blur(100px);
+}
+
+.experience::after{
+  content:"";
+  position:absolute;
+  width:400px;
+  height:400px;
+
+  background:radial-gradient(circle, rgba(0,120,255,0.15), transparent);
+
+  bottom:-100px;
+  right:-100px;
+  filter:blur(100px);
+}
+
+/* CONTENT */
+.experience-content{
+  position:relative;
+  z-index:2;
+}
+
+/* HEADING */
+.experience h2{
+  font-size:48px;
+  font-weight:600;
+  margin-bottom:20px;
+
+  animation:fadeUp 1s ease;
+}
+
+/* GOLD TEXT */
+.experience h2 span{
+  background:linear-gradient(to right,#c8a96a,#b48a2c,#c8a96a);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+/* TEXT */
+.experience p{
+  max-width:700px;
+  margin:auto;
+  font-size:18px;
+  color:#555;
+  line-height:1.7;
+
+  animation:fadeUp 1.3s ease;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+
+/* HERO SECTION */
+.hero{
+  position:relative;
+  height:90vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  overflow:hidden;
+}
+
+/* VIDEO */
+.hero-video{
+  position:absolute;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+/* BLUR IMAGE OVERLAY */
+.hero-image-overlay{
+  position:absolute;
+  inset:0;
+  background:url('images/sweets-bg.jpg') center/cover no-repeat;
+  filter:blur(20px);
+  opacity:0.25;
+  z-index:2;
+}
+
+/* DARK + GOLD OVERLAY */
+.hero-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)),
+    radial-gradient(circle at right, rgba(200,169,106,0.5), transparent 60%);
+
+  z-index:3;
+}
+
+/* CONTENT */
+.hero-content{
+  position:relative;
+  z-index:4;
+  color:white;
+  animation:fadeUp 1.2s ease;
+}
+
+/* HEADING */
+.hero-content h1{
+  font-size:65px;
+  font-weight:600;
+  letter-spacing:1px;
+
+  background:linear-gradient(to right,#fff,#c8a96a);
+  -webkit-background-clip:text;
+  color:transparent;
+
+
+}
+
+/* SUBTEXT */
+.hero-content p{
+  font-size:23px;
+  opacity:0.9;
+}
+
+/* ANIMATION */
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+
+
+@media (max-width:768px){
+
+/* ===== EXPERIENCE SECTION ===== */
+.experience{
+  padding: 20px 15px;
+  text-align:center;
+}
+
+.experience-content h2{
+  font-size: 24px;
+  line-height: 1.3;
+}
+
+.experience-content span{
+  color:#c89b5e;
+}
+
+.experience-content p{
+  font-size:14px;
+  line-height:1.6;
+  padding:10px 5px;
+}
+
+
+/* ===== FEATURES SECTION (3 CARDS FIX) ===== */
+.features{
+  display:grid;
+  grid-template-columns: 1fr; /* stack vertically */
+  gap:15px;
+  padding:20px 15px;
+}
+
+/* CARD FIX */
+.card{
+  width:100%;
+  padding:15px;
+  border-radius:15px;
+  text-align:center;
+}
+
+/* ICON */
+.card .icon{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+/* TEXT FIX */
+.card h3{
+  font-size:18px;
+  margin-bottom:5px;
+}
+
+.card p{
+  font-size:13px;
+  line-height:1.5;
+}
+
+
+/* ===== LEGACY SECTION FIX ===== */
+.legacy{
+  position:relative;
+  padding:40px 15px;
+}
+
+/* BACKGROUND FIX */
+.legacy-bg{
+  width:100%;
+  height:555px;
+  background-size:cover;
+  background-position:center;
+  border-radius:15px;
+}
+
+/* CONTENT CARD CENTER */
+.legacy-card{
+  position:relative;
+  margin-top:-60px; /* overlap effect */
+  background:#111;
+  color:#fff;
+  padding:20px;
+  border-radius:15px;
+  text-align:center;
+}
+
+/* TEXT FIX */
+.legacy-card h4{
+  font-size:14px;
+  color:#c89b5e;
+}
+
+.legacy-card h2{
+  font-size:22px;
+  margin:10px 0;
+}
+
+.legacy-card p{
+  font-size:13px;
+  line-height:1.5;
+}
+
+/* BUTTON */
+.legacy-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:10px 18px;
+  border:1px solid #c89b5e;
+  border-radius:25px;
+  font-size:13px;
+}
+
+
+/* ===== REMOVE SIDE CUT ISSUE ===== */
+body{
+  overflow-x:hidden;
+}
+
+}
